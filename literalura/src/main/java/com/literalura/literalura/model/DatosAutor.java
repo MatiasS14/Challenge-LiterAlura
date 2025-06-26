@@ -1,0 +1,16 @@
+package com.literalura.literalura.model;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record DatosAutor(
+        @JsonAlias("birth_year")
+        Integer anioNacimiento,
+        @JsonAlias("death_year")
+        Integer anioMuerte,
+        @JsonAlias("name")
+        String nombre
+
+) {
+}
